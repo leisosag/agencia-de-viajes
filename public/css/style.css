@@ -1,0 +1,194 @@
+:root {
+  --fondo-color: #fbf9f7;
+  --acento: #7e8ee3;
+  --acento-hover: #6c7ed8;
+  --negro: #212740;
+  --gris: #bcbdc5;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--negro);
+}
+h1,
+h2,
+h3 {
+  color: var(--acento);
+}
+h1 {
+  font-size: 3.4rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+p {
+  font-size: 1rem;
+}
+.container-img {
+  width: 100%;
+}
+.icono {
+  background: #fff;
+  color: var(--gris);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 80px;
+  vertical-align: middle;
+  padding: 20px;
+}
+i {
+}
+#about {
+  background-color: var(--fondo-color);
+}
+.btn-principal {
+  background-color: var(--acento);
+  border-color: var(--acento);
+  color: #fff;
+  padding: 0.8rem 0;
+  text-transform: uppercase;
+  border-radius: 0.8rem;
+}
+.btn-principal:hover {
+  background-color: var(--acento-hover);
+  border-color: var(--acento-hover);
+  color: #fff;
+}
+.slider {
+  background: url(../img//superior.jpg);
+  min-height: 600px;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.slider h1 {
+  color: white;
+}
+.slider em {
+  font-family: "Covered By Your Grace", cursive;
+  font-size: 4rem;
+  order: -1;
+  line-height: 0.8;
+  color: rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 768px) {
+  .slider em {
+    font-size: 8rem;
+  }
+}
+.home {
+  position: relative;
+}
+.home .navegacion {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.nav-link.active {
+  border-bottom: 5px solid white;
+}
+blockquote {
+  font-weight: bold;
+  line-height: 2;
+}
+.navegacion {
+  background-color: #fff;
+}
+header .nav a {
+  font-size: 2rem;
+  color: white;
+}
+footer .nav a,
+.copyright {
+  font-size: 1.6rem;
+  color: black;
+}
+.listado-iconos {
+  background-color: rgb(245, 245, 245);
+}
+.listado-iconos img {
+  height: 100px;
+}
+
+.descuento {
+  height: 400px;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url(../img/cupon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .descuento {
+    height: 400px;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        transparent 50%,
+        transparent 100%
+      ),
+      url(../img/cupon.jpg);
+  }
+}
+.descuento .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  color: white;
+}
+.descuento p {
+  font-family: "Staatliches", cursive;
+  line-height: 0.8;
+}
+.descuento .titulo {
+  font-size: 2.4rem;
+}
+.descuento .precio {
+  color: #15b9d5;
+  font-size: 3rem;
+}
+
+.proximos-viajes p {
+  font-size: 0.9rem;
+}
+i {
+  color: #dc135f;
+  font-size: 2rem;
+}
+
+.testimoniales p {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+.testimoniales p::before {
+  background-image: url(../img/quote.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40px;
+  content: "";
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-bottom: 1rem;
+}
+.blockquote-footer {
+  text-align: right;
+  color: #dc135f;
+  font-weight: bold;
+  margin-top: 1rem;
+}
