@@ -2,10 +2,23 @@ import { Viaje } from "../models/Viaje.js";
 import { Opiniones } from "../models/Opiniones.js";
 
 // INICIO
-const paginaInicio = (req, res) => {
-  res.render("inicio", {
-    pagina: "Inicio",
-  });
+const paginaInicio = async (req, res) => {
+  // trae 3 viajes del modelo viajes y las opiniones
+  const promiseDB = [];
+  promiseDB.push(Viaje.findAll({ limit: 4 }));
+  promiseDB.push(Opiniones.findAll({ limit: 3 }));
+  try {
+    const resultado = await Promise.all(promiseDB);
+
+    res.render("inicio", {
+      pagina: "Inicio",
+      clase: "home",
+      viajes: resultado[0],
+      opiniones: resultado[1],
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 // DESTINOS

@@ -1,0 +1,13 @@
+.row.justify-content-center.mt-5.mb-5
+    each viaje in viajes
+        .card.mb-3.ml-2.contenedor-imagen(style='width: 17rem;')
+            img.card-img-top(src=`img/destinos_${viaje.imagen}_ln.jpg` alt='imagen viaje')
+            .card-body.overlay
+                .card-detalles.d-flex.justify-content-between.text-left.pb-1.pt-1
+                    .card-destino
+                        p Buenos Aires
+                        h5.card-title #{viaje.titulo}
+                    .card-precio.d-flex.align-items-center
+                        p.card-text
+                        | ARS #{viaje.precio}
+                a.btn.btn-principal.btn-block(href=`viajes/${viaje.slug}`) Reservar

@@ -1,0 +1,10 @@
+.row.mt-5.mb-5.col.justify-content-center.opiniones-card
+    each opinion in opiniones
+        .col-md-6.col-lg-4.mb-3
+            .card.p-2
+                .card-body
+                blockquote.blockquote
+                    p.mb-0.pl-3
+                        | #{opinion.mensaje}
+                    footer.blockquote-footer.pr-3
+                        | #{opinion.nombre}

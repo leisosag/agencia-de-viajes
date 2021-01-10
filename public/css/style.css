@@ -37,6 +37,125 @@ h3 {
   border-color: var(--acento-hover);
   color: #fff;
 }
+/****** NAVBAR ******/
+nav.navbar {
+  background-color: #fff;
+}
+/* en pagina de inicio */
+.home nav.navbar {
+  background-color: var(--acento);
+}
+/* los li */
+.home .navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+/* logo */
+.home .navbar-light .navbar-brand {
+  color: #fff;
+}
+/* toggler */
+/*
+.home button.navbar-toggler {
+  border: 1px solid #fff;
+}
+*/
+/****** FOOTER ******/
+.footer {
+  background-color: var(--acento);
+}
+.footer a {
+  color: #fff;
+}
+.fa-stack i {
+  color: #fff;
+}
+.fa-stack .fa-circle {
+  color: #fff;
+}
+.fa-stack .fa-facebook-f,
+.fa-stack .fa-twitter,
+.fa-stack .fa-linkedin-in,
+.fa-stack .fa-instagram {
+  color: var(--acento);
+  font-size: 1rem;
+}
+/****** INICIO ******/
+#home {
+  background-color: #fff;
+}
+.slider {
+  background: url(../img//superior1.jpg);
+  min-height: 600px;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  filter: brightness(80%);
+}
+.slider h1 {
+  color: white;
+}
+.slider em {
+  font-family: "Covered By Your Grace", cursive;
+  font-size: 4rem;
+  order: -1;
+  line-height: 0.8;
+  color: rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 768px) {
+  .slider em {
+    font-size: 8rem;
+  }
+}
+.descuento {
+  height: 400px;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url(../img/cupon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .descuento {
+    height: 400px;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        transparent 50%,
+        transparent 100%
+      ),
+      url(../img/cupon.jpg);
+  }
+}
+@media (max-width: 400px) {
+  .slider {
+    background: url(../img//superior-mobile.jpg);
+  }
+}
+/* seccion descuento */
+.descuento .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  color: white;
+}
+.descuento p {
+  line-height: 0.8;
+}
+.descuento .titulo {
+  font-size: 2.4rem;
+}
+.descuento .precio {
+  color: var(--acento);
+  font-size: 3rem;
+}
 /****** ABOUT ******/
 #about {
   background-color: var(--fondo-color);
@@ -139,103 +258,4 @@ blockquote {
   color: var(--acento);
   font-weight: bold;
   margin-top: 1rem;
-}
-/* --------- */
-.slider {
-  background: url(../img//superior.jpg);
-  min-height: 600px;
-  height: 100vh;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-.slider h1 {
-  color: white;
-}
-.slider em {
-  font-family: "Covered By Your Grace", cursive;
-  font-size: 4rem;
-  order: -1;
-  line-height: 0.8;
-  color: rgba(255, 255, 255, 0.5);
-}
-@media (min-width: 768px) {
-  .slider em {
-    font-size: 8rem;
-  }
-}
-.home {
-  position: relative;
-}
-.home .navegacion {
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-.nav-link.active {
-  border-bottom: 5px solid white;
-}
-
-.navegacion {
-  background-color: #fff;
-}
-header .nav a {
-  font-size: 2rem;
-  color: white;
-}
-footer .nav a,
-.copyright {
-  font-size: 1.6rem;
-  color: black;
-}
-
-.descuento {
-  height: 400px;
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.5) 100%
-    ),
-    url(../img/cupon.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-@media (min-width: 768px) {
-  .descuento {
-    height: 400px;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.5) 0%,
-        rgba(0, 0, 0, 0.5) 50%,
-        transparent 50%,
-        transparent 100%
-      ),
-      url(../img/cupon.jpg);
-  }
-}
-.descuento .contenido {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 400px;
-  color: white;
-}
-.descuento p {
-  font-family: "Staatliches", cursive;
-  line-height: 0.8;
-}
-.descuento .titulo {
-  font-size: 2.4rem;
-}
-.descuento .precio {
-  color: #15b9d5;
-  font-size: 3rem;
-}
-
-.proximos-viajes p {
-  font-size: 0.9rem;
 }

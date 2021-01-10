@@ -9,8 +9,9 @@ html(lang="es")
         link(rel="shortcut icon", href="/img/favicon.ico", type="image/x-icon")
         script(src="https://kit.fontawesome.com/675e0bba25.js" crossorigin="anonymous")
         title #{nombreSitio} | #{pagina}
-    body
+    body(class= clase)
         include header
+        block slider
         block contenido
         include footer
         script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')

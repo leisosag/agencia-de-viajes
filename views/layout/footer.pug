@@ -1,2 +1,31 @@
-p footer
-p #{actualYear}
+footer.footer
+    .container
+        .row.pt-5.pb-5.justify-content-center.text-center
+            .col-sm-12.col-md-2.mb-3.text-white
+                a.navbar-brand(href='/')
+                img.d-inline-block.align-top.fixed(src="/img/icono.png" width='30' height='30' alt='logo')
+                |   Trip
+            .col-sm-12.col-md-2.mb-3
+                a(href='/destinos') Destinos
+            .col-sm-12.col-md-2.mb-3
+                a(href='/nosotros') Nosotros
+            .col-sm-12.col-md-2.mb-3
+                a(href='/opiniones') Opiniones
+            .col-sm-12.col-md-3.mb-4
+                .iconos-social.d-flex.justify-content-center
+                    a(href='https://www.facebook.com/')
+                        span.fa-stack(style='vertical-align: top;')
+                            i.fas.fa-circle.fa-stack-2x
+                            i.fab.fa-facebook-f.fa-stack-1x
+                    a(href='https://www.twitter.com/')
+                        span.fa-stack(style='vertical-align: top;')
+                            i.fas.fa-circle.fa-stack-2x
+                            i.fab.fa-twitter.fa-stack-1x
+                    a(href='https://www.linkedin.com/')
+                        span.fa-stack(style='vertical-align: top;')
+                            i.fas.fa-circle.fa-stack-2x
+                            i.fab.fa-linkedin-in.fa-stack-1x
+                    a(href='https://www.instagram.com/')
+                        span.fa-stack(style='vertical-align: top;')
+                            i.fas.fa-circle.fa-stack-2x
+                            i.fab.fa-instagram.fa-stack-1x

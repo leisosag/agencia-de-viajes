@@ -6,17 +6,7 @@ block contenido
             .row.mt-5.mb-5.col.justify-content-center
                 .col-md-10.mb-1
                     h2.d-block.w-100.text-center Lo que dicen nuestros clientes
-            .row.mt-5.mb-5.col.justify-content-center.opiniones-card
-                each opinion in opiniones
-                    .col-md-6.col-lg-4.mb-3
-                        .card.p-2
-                            .card-body
-                            blockquote.blockquote
-                                p.mb-0.pl-3
-                                    | #{opinion.mensaje}
-                                footer.blockquote-footer.pr-3
-                                    | #{opinion.nombre}
-                    
+            include ./layout/bloque-opiniones
             .row.mt-5.mb-5.col.justify-content-center
                 .col-md-10.mb-1.mt-5
                     h2.d-block.w-100.text-center Deja tu comentario
@@ -27,7 +17,7 @@ block contenido
                 .col-12.col-md-10.col-lg-8.mb-1
                     form(action="/opiniones" method="POST")
                         .form-group
-                            input#nombre.form-control.mb-2(type="text", placeholder="Nombre", name="nombre", autofocus, value= nombre)
+                            input#nombre.form-control.mb-2(type="text", placeholder="Nombre", name="nombre",value= nombre)
                             input#email.form-control.mb-2(type="email", placeholder="Email", name="email", value= email)
                             textarea#mensaje.form-control.mb-2(name="mensaje", cols="30", rows="3", placeholder="Tu mensaje")= mensaje
                             input.btn.btn-principal.btn-block(type="submit")

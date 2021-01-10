@@ -1,4 +1,29 @@
 extends ./layout/index
 
+block slider
+    .slider
+        a(href='/destinos')
+        h1 Iguazú
+        em aventura
+
 block contenido
-    h1 #{pagina}
+    main#home
+        .container.pt-5
+            .row.mt-5.mb-5.col.justify-content-center
+                .col-md-10.mb-1
+                    h2.d-block.w-100.text-center Nuestros destinos
+            include ./layout/bloque-destinos
+        .descuento
+            .container
+                .row
+                    .col-md-6
+                        .contenido
+                            h3 10% de descuento
+                            p.titulo Viaje a Canada
+                            p.fecha 20 de Marzo de 2022 - 28 de Marzo de 2022
+                            p.precio ARS 110.254
+        .container.pt-5
+            .row.mt-5.mb-5.col.justify-content-center
+                .col-md-10.mb-1
+                    h2.d-block.w-100.text-center Lo que dicen nuestros clientes
+            include ./layout/bloque-opiniones
