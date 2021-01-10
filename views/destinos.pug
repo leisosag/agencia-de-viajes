@@ -15,4 +15,4 @@ block contenido
                                 .card-precio.d-flex.align-items-center
                                     p.card-text
                                     | ARS #{viaje.precio}
-                            button.btn.btn-principal.btn-block Reservar
+                            a.btn.btn-principal.btn-block(href=`viajes/${viaje.slug}`) Reservar

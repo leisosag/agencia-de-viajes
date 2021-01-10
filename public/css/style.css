@@ -24,6 +24,23 @@ h3 {
   font-size: 1.3rem;
   font-weight: 700;
 }
+.btn-principal {
+  background-color: var(--acento);
+  border-color: var(--acento);
+  color: #fff;
+  padding: 0.8rem 0;
+  text-transform: uppercase;
+  border-radius: 0.8rem;
+}
+.btn-principal:hover {
+  background-color: var(--acento-hover);
+  border-color: var(--acento-hover);
+  color: #fff;
+}
+/****** ABOUT ******/
+#about {
+  background-color: var(--fondo-color);
+}
 .container-img {
   width: 100%;
 }
@@ -38,6 +55,10 @@ h3 {
   vertical-align: middle;
   padding: 20px;
 }
+i {
+  font-size: 2rem;
+}
+/****** VIAJES ******/
 .card-destino p {
   line-height: 0.3;
 }
@@ -88,22 +109,38 @@ h3 {
   border: 2px solid #fff;
   color: #fff;
 }
-#about {
+/****** OPINIONES ******/
+blockquote {
+  font-weight: bold;
+  line-height: 2;
+}
+.opiniones-card .card {
+  border: none;
+  border-bottom: 3px solid var(--acento);
   background-color: var(--fondo-color);
 }
-.btn-principal {
-  background-color: var(--acento);
-  border-color: var(--acento);
-  color: #fff;
-  padding: 0.8rem 0;
-  text-transform: uppercase;
-  border-radius: 0.8rem;
+.opiniones-card p {
+  font-size: 0.8rem;
+  font-weight: normal;
 }
-.btn-principal:hover {
-  background-color: var(--acento-hover);
-  border-color: var(--acento-hover);
-  color: #fff;
+.opiniones-card p::before {
+  background-image: url(../img/quote2.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40px;
+  content: "";
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-bottom: 1rem;
 }
+.blockquote-footer {
+  text-align: right;
+  color: var(--acento);
+  font-weight: bold;
+  margin-top: 1rem;
+}
+/* --------- */
 .slider {
   background: url(../img//superior.jpg);
   min-height: 600px;
@@ -143,10 +180,7 @@ h3 {
 .nav-link.active {
   border-bottom: 5px solid white;
 }
-blockquote {
-  font-weight: bold;
-  line-height: 2;
-}
+
 .navegacion {
   background-color: #fff;
 }
@@ -158,12 +192,6 @@ footer .nav a,
 .copyright {
   font-size: 1.6rem;
   color: black;
-}
-.listado-iconos {
-  background-color: rgb(245, 245, 245);
-}
-.listado-iconos img {
-  height: 100px;
 }
 
 .descuento {
@@ -210,30 +238,4 @@ footer .nav a,
 
 .proximos-viajes p {
   font-size: 0.9rem;
-}
-i {
-  color: #dc135f;
-  font-size: 2rem;
-}
-
-.testimoniales p {
-  font-size: 0.8rem;
-  font-weight: normal;
-}
-.testimoniales p::before {
-  background-image: url(../img/quote.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 40px;
-  content: "";
-  width: 40px;
-  height: 40px;
-  display: block;
-  margin-bottom: 1rem;
-}
-.blockquote-footer {
-  text-align: right;
-  color: #dc135f;
-  font-weight: bold;
-  margin-top: 1rem;
 }

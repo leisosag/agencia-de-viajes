@@ -1,0 +1,13 @@
+extends ./layout/index
+
+block contenido
+    main
+        .container.pt-5
+            .row.mt-5.mb-5
+                .col-sm-12.col-lg-6.mb-1
+                    img.container-img(src=`/img/${resultado.imagen}.jpg`, alt="imagen del viaje")
+                .col-sm-12.col-lg-6.mb-1.d-flex.align-items-center
+                    .columna-texto.p-5
+                        h2 #{resultado.titulo}
+                        p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words
+                        a.btn.btn-principal.btn-block(href=`viajes/${resultado.slug}`) Reservar

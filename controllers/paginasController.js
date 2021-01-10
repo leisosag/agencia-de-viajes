@@ -1,4 +1,5 @@
 import { Viaje } from "../models/Viaje.js";
+import { Opiniones } from "../models/Opiniones.js";
 
 // INICIO
 const paginaInicio = (req, res) => {
@@ -18,6 +19,22 @@ const paginaDestinos = async (req, res) => {
   });
 };
 
+// VIAJE INDIVIDUAL
+const paginaViajeInd = async (req, res) => {
+  const { slug } = req.params;
+
+  try {
+    const resultado = await Viaje.findOne({ where: { slug } });
+
+    res.render("viaje", {
+      pagina: "Informacion viaje",
+      resultado,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 // NOSOTROS
 const paginaNosotros = (req, res) => {
   res.render("nosotros", {
@@ -26,10 +43,16 @@ const paginaNosotros = (req, res) => {
 };
 
 // OPINIONES
-const paginaOpiniones = (req, res) => {
-  res.render("opiniones", {
-    pagina: "Opiniones",
-  });
+const paginaOpiniones = async (req, res) => {
+  try {
+    const opiniones = await Opiniones.findAll();
+    res.render("opiniones", {
+      pagina: "Opiniones",
+      opiniones,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 // CONTACTO
@@ -45,4 +68,5 @@ export {
   paginaNosotros,
   paginaOpiniones,
   paginaContacto,
+  paginaViajeInd,
 };
