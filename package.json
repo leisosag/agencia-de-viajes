@@ -4,6 +4,7 @@
   "description": "Proyecto realizado con nodejs, express, sequelize, pug y bootstrap",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "repository": {

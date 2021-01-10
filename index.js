@@ -1,6 +1,8 @@
 import express from "express";
 import router from "./routes/index.js";
 import db from "./config/db.js";
+import dotenv from "dotenv";
+dotenv.config({ path: "variables.env" });
 
 const app = express();
 
@@ -9,7 +11,8 @@ db.authenticate()
   .then(() => console.log("db conectada"))
   .catch((error) => console.log(error));
 
-// defino el puerto
+// puerto y host para la app
+const host = process.env.HOST || "0.0.0.0";
 const port = process.env.PORT || 4000;
 
 // habilito PUG
@@ -33,6 +36,4 @@ app.use(express.static("public"));
 app.use("/", router);
 
 // arranca el servidor
-app.listen(port, () =>
-  console.log(`el servidor esta funcionando en el puerto ${port}`)
-);
+app.listen(port, host, () => console.log("el servidor esta funcionando"));
