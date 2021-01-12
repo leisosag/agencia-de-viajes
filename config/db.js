@@ -1,6 +1,6 @@
-import Sequelize from "sequelize";
-import dotenv from "dotenv";
-dotenv.config({ path: "variables.env" });
+import Sequelize from 'sequelize';
+import dotenv from 'dotenv';
+dotenv.config({ path: 'variables.env' });
 
 const db = new Sequelize(
   process.env.BD_NOMBRE,
@@ -9,7 +9,7 @@ const db = new Sequelize(
   {
     host: process.env.BD_HOST,
     port: process.env.BD_PORT,
-    dialect: "mysql",
+    dialect: 'mysql',
     define: {
       timestamps: false,
     },
